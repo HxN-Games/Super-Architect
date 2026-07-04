@@ -147,6 +147,9 @@ public class ModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(SuperArchitectItems.DISK_2k, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(SuperArchitectItems.DISK_4k, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(SuperArchitectItems.DISK_8k, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(SuperArchitectItems.CHIP, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(SuperArchitectItems.RAW_SILICA, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(SuperArchitectItems.SILICON, ModelTemplates.FLAT_ITEM);
 
 
     }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "ingredient": {
+    "item": "super_architect:raw_silica"
+  },
+  "result": {
+    "id": "super_architect:silicon"
+  }
+}

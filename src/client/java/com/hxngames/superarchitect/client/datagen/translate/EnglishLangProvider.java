@@ -26,6 +26,9 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(items.DISK_2k, "Disk 2k");
         translationBuilder.add(items.DISK_4k, "Disk 4k");
         translationBuilder.add(items.DISK_8k, "Disk 8k");
+        translationBuilder.add(items.CHIP, "Chip");
+        translationBuilder.add(items.RAW_SILICA, "Raw Silica");
+        translationBuilder.add(items.SILICON, "Silicon");
 
         translationBuilder.add(blocks.DISK_RACK, "Disk Rack");
         translationBuilder.add(blocks.MONITOR, "Monitor");

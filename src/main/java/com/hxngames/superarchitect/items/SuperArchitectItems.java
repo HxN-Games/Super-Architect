@@ -16,6 +16,9 @@ public class SuperArchitectItems {
     public static Item DISK_2k =  RegistryHelper.registerItem(MOD_ID, "disk_2048", new DiskItem(2048));
     public static Item DISK_4k =  RegistryHelper.registerItem(MOD_ID, "disk_4096", new DiskItem(4096));
     public static Item DISK_8k =  RegistryHelper.registerItem(MOD_ID, "disk_8192", new DiskItem(8192));
+    public static Item CHIP = RegistryHelper.registerItem(MOD_ID, "chip", new Item(new Item.Properties()));
+    public static Item RAW_SILICA = RegistryHelper.registerItem(MOD_ID, "raw_silica", new Item(new Item.Properties()));
+    public static Item SILICON = RegistryHelper.registerItem(MOD_ID, "silicon", new Item(new Item.Properties()));
 
     public static final DataComponentType<DiskComponent> DISK_COMPONENT = RegistryHelper.registerDataComponentType(
             MOD_ID, "disk_component",

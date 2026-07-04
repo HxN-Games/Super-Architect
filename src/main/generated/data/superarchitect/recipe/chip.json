@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "g": {
+      "item": "minecraft:gold_ingot"
+    },
+    "r": {
+      "item": "minecraft:redstone"
+    },
+    "s": {
+      "item": "super_architect:silicon"
+    }
+  },
+  "pattern": [
+    "gsg",
+    "srs",
+    "gsg"
+  ],
+  "result": {
+    "count": 1,
+    "id": "super_architect:chip"
+  }
+}

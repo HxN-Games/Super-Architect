@@ -57,6 +57,8 @@ dependencies {
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+    // Development (Plugin)
+    modRuntimeOnly "maven.modrinth:jei:19.27.0.346"
     modRuntimeOnly "maven.modrinth:modmenu:11.0.4"
     modRuntimeOnly "maven.modrinth:sodium:mc1.21.1-0.6.13-fabric"
     modRuntimeOnly("me.djtheredstoner:DevAuth-${project.moduleName}:${project.devauth_version}")

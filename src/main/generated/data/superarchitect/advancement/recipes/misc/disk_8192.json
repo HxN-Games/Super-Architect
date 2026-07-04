@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_disk_4096": {
+      "conditions": {
+        "items": [
+          {
+            "items": "super_architect:disk_4096"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "super_architect:disk_8192"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_disk_4096"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "super_architect:disk_8192"
+    ]
+  }
+}

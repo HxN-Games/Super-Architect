@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_disk_512": {
+      "conditions": {
+        "items": [
+          {
+            "items": "super_architect:disk_512"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "super_architect:disk_1024"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_disk_512"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "super_architect:disk_1024"
+    ]
+  }
+}

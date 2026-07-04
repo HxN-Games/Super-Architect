@@ -1,14 +1,11 @@
 package com.hxngames.superarchitect.client.datagen;
 
+import com.hxngames.superarchitect.blocks.SuperArchitectBlocks;
 import com.hxngames.superarchitect.items.SuperArchitectItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -37,5 +34,102 @@ public class SuperArchitectRecipeProvider extends FabricRecipeProvider {
         )
         .unlockedBy(getHasName(SuperArchitectItems.RAW_SILICA), has(SuperArchitectItems.RAW_SILICA))
         .save(exporter, getConversionRecipeName(SuperArchitectItems.SILICON, SuperArchitectItems.RAW_SILICA) + "_blasting");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.CHIP, 1)
+                .pattern("gsg")
+                .pattern("srs")
+                .pattern("gsg")
+                .define('g', Items.GOLD_INGOT)
+                .define('s', SuperArchitectItems.SILICON)
+                .define('r', Items.REDSTONE)
+                .group("multi_bench")
+                .unlockedBy(getHasName(SuperArchitectItems.SILICON), has(SuperArchitectItems.SILICON))
+                .save(exporter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectBlocks.DISK_RACK, 1)
+                .pattern("ipi")
+                .pattern("scs")
+                .pattern("ipi")
+                .define('i', Items.IRON_INGOT)
+                .define('s', SuperArchitectItems.SILICON)
+                .define('p', SuperArchitectBlocks.PIPE)
+                .define('c', SuperArchitectItems.CHIP)
+                .group("multi_bench")
+                .unlockedBy(getHasName(SuperArchitectItems.SILICON), has(SuperArchitectItems.SILICON))
+                .save(exporter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectBlocks.PIPE, 4)
+                .pattern("ss")
+                .pattern("ss")
+                .define('s', SuperArchitectItems.SILICON)
+                .group("multi_bench")
+                .unlockedBy(getHasName(SuperArchitectItems.SILICON), has(SuperArchitectItems.SILICON))
+                .save(exporter);
+
+        // Disk 128 -> 256
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_256, 1)
+                .pattern("sms")
+                .pattern("mdm")
+                .pattern("sms")
+                .define('s', SuperArchitectItems.SILICON)
+                .define('m', Items.COPPER_INGOT)
+                .define('d', SuperArchitectItems.DISK_128)
+                .unlockedBy(getHasName(SuperArchitectItems.DISK_128), has(SuperArchitectItems.DISK_128))
+                .save(exporter);
+
+        // Disk 256 -> 512
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_512, 1)
+                .pattern("sms")
+                .pattern("mdm")
+                .pattern("sms")
+                .define('s', SuperArchitectItems.SILICON)
+                .define('m', Items.IRON_INGOT)
+                .define('d', SuperArchitectItems.DISK_256)
+                .unlockedBy(getHasName(SuperArchitectItems.DISK_256), has(SuperArchitectItems.DISK_256))
+                .save(exporter);
+
+        // Disk 512 -> 1k
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_1k, 1)
+                .pattern("sms")
+                .pattern("mdm")
+                .pattern("sms")
+                .define('s', SuperArchitectItems.SILICON)
+                .define('m', Items.GOLD_INGOT)
+                .define('d', SuperArchitectItems.DISK_512)
+                .unlockedBy(getHasName(SuperArchitectItems.DISK_512), has(SuperArchitectItems.DISK_512))
+                .save(exporter);
+
+        // Disk 1k -> 2k
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_2k, 1)
+                .pattern("sms")
+                .pattern("mdm")
+                .pattern("sms")
+                .define('s', SuperArchitectItems.SILICON)
+                .define('m', Items.EMERALD)
+                .define('d', SuperArchitectItems.DISK_1k)
+                .unlockedBy(getHasName(SuperArchitectItems.DISK_1k), has(SuperArchitectItems.DISK_1k))
+                .save(exporter);
+
+        // Disk 2k -> 4k
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_4k, 1)
+                .pattern("sms")
+                .pattern("mdm")
+                .pattern("sms")
+                .define('s', SuperArchitectItems.SILICON)
+                .define('m', Items.DIAMOND)
+                .define('d', SuperArchitectItems.DISK_2k)
+                .unlockedBy(getHasName(SuperArchitectItems.DISK_2k), has(SuperArchitectItems.DISK_2k))
+                .save(exporter);
+
+        // Disk 4k -> 8k
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_8k, 1)
+                .pattern("sms")
+                .pattern("mdm")
+                .pattern("sms")
+                .define('s', SuperArchitectItems.SILICON)
+                .define('m', Items.NETHERITE_INGOT)
+                .define('d', SuperArchitectItems.DISK_4k)
+                .unlockedBy(getHasName(SuperArchitectItems.DISK_4k), has(SuperArchitectItems.DISK_4k))
+                .save(exporter);
     }
 }

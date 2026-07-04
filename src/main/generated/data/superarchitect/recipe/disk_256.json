@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "d": {
+      "item": "super_architect:disk_128"
+    },
+    "m": {
+      "item": "minecraft:copper_ingot"
+    },
+    "s": {
+      "item": "super_architect:silicon"
+    }
+  },
+  "pattern": [
+    "sms",
+    "mdm",
+    "sms"
+  ],
+  "result": {
+    "count": 1,
+    "id": "super_architect:disk_256"
+  }
+}

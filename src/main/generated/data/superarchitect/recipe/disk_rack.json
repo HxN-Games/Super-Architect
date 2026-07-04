@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "c": {
+      "item": "super_architect:chip"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "p": {
+      "item": "super_architect:pipe"
+    },
+    "s": {
+      "item": "super_architect:silicon"
+    }
+  },
+  "pattern": [
+    "ipi",
+    "scs",
+    "ipi"
+  ],
+  "result": {
+    "count": 1,
+    "id": "super_architect:disk_rack"
+  }
+}

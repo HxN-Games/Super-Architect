@@ -121,7 +121,7 @@ public class ModelProvider extends FabricModelProvider {
         pipeMultipart.with(Condition.condition().term(com.hxngames.superarchitect.blocks.PipeBlock.WEST, true), Variant.variant().with(VariantProperties.MODEL, ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/pipe_west")));
 
         blockStateModelGenerator.blockStateOutput.accept(pipeMultipart);
-        blockStateModelGenerator.delegateItemModel(SuperArchitectBlocks.PIPE, ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/pipe_core"));
+        blockStateModelGenerator.delegateItemModel(SuperArchitectBlocks.PIPE, ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/pipe"));
 
         // Monitor Block
         blockStateModelGenerator.blockStateOutput.accept(

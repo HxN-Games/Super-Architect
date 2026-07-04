@@ -1,5 +1,9 @@
 {
   "variants": {
+    "facing=down": {
+      "model": "super_architect:block/monitor",
+      "x": 90
+    },
     "facing=east": {
       "model": "super_architect:block/monitor",
       "y": 90
@@ -11,6 +15,10 @@
     "facing=south": {
       "model": "super_architect:block/monitor",
       "y": 180
+    },
+    "facing=up": {
+      "model": "super_architect:block/monitor",
+      "x": 270
     },
     "facing=west": {
       "model": "super_architect:block/monitor",

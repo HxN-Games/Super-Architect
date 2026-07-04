@@ -12,6 +12,7 @@ import net.minecraft.data.models.blockstates.*;
 import net.minecraft.data.models.model.ModelLocationUtils;
 import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
@@ -125,11 +126,13 @@ public class ModelProvider extends FabricModelProvider {
         // Monitor Block
         blockStateModelGenerator.blockStateOutput.accept(
             MultiVariantGenerator.multiVariant(SuperArchitectBlocks.MONITOR, Variant.variant().with(VariantProperties.MODEL, ModelLocationUtils.getModelLocation(SuperArchitectBlocks.MONITOR)))
-                .with(PropertyDispatch.property(HorizontalDirectionalBlock.FACING)
+                .with(PropertyDispatch.property(DirectionalBlock.FACING)
                     .select(Direction.NORTH, Variant.variant().with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0))
                     .select(Direction.EAST, Variant.variant().with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90))
                     .select(Direction.SOUTH, Variant.variant().with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180))
                     .select(Direction.WEST, Variant.variant().with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270))
+                    .select(Direction.UP, Variant.variant().with(VariantProperties.X_ROT, VariantProperties.Rotation.R270))
+                    .select(Direction.DOWN, Variant.variant().with(VariantProperties.X_ROT, VariantProperties.Rotation.R90))
                 )
         );
         blockStateModelGenerator.delegateItemModel(SuperArchitectBlocks.MONITOR, ModelLocationUtils.getModelLocation(SuperArchitectBlocks.MONITOR));

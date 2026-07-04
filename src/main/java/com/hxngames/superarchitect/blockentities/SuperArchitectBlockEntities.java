@@ -11,5 +11,11 @@ public class SuperArchitectBlockEntities {
             BlockEntityType.Builder.of(DiskRackBlockEntity::new, SuperArchitectBlocks.DISK_RACK).build()
     );
 
+    public static final BlockEntityType<MonitorBlockEntity> MONITOR = RegistryHelper.registerBlockEntity(
+            "super_architect",
+            "monitor",
+            BlockEntityType.Builder.of(MonitorBlockEntity::new, SuperArchitectBlocks.MONITOR).build()
+    );
+
     public static void initialize() {}
 }

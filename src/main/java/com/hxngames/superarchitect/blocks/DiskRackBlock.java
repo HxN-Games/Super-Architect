@@ -43,15 +43,17 @@ public class DiskRackBlock extends Block implements EntityBlock {
                         .requiresCorrectToolForDrops()
                         .strength(3.5F)
                 );
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH)
-                .setValue(BAY1, 0)
-                .setValue(BAY2, 0)
-                .setValue(BAY3, 0)
-                .setValue(BAY4, 0)
-                .setValue(CONNECTED_LEFT, false)
-                .setValue(CONNECTED_RIGHT, false)
-                .setValue(CONNECTED_UP, false)
-                .setValue(CONNECTED_DOWN, false));
+        this.registerDefaultState(
+                this.stateDefinition.any()
+                        .setValue(FACING, Direction.NORTH)
+                        .setValue(BAY1, 0)
+                        .setValue(BAY2, 0)
+                        .setValue(BAY3, 0)
+                        .setValue(BAY4, 0)
+                        .setValue(CONNECTED_LEFT, false)
+                        .setValue(CONNECTED_RIGHT, false)
+                        .setValue(CONNECTED_UP, false)
+                        .setValue(CONNECTED_DOWN, false));
     }
 
     @Override

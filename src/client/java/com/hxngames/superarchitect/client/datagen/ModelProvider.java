@@ -105,6 +105,18 @@ public class ModelProvider extends FabricModelProvider {
         blockStateModelGenerator.blockStateOutput.accept(multipart);
 
         blockStateModelGenerator.delegateItemModel(SuperArchitectBlocks.DISK_RACK, ModelLocationUtils.getModelLocation(SuperArchitectBlocks.DISK_RACK));
+
+        // Monitor Block
+        blockStateModelGenerator.blockStateOutput.accept(
+            MultiVariantGenerator.multiVariant(SuperArchitectBlocks.MONITOR, Variant.variant().with(VariantProperties.MODEL, ModelLocationUtils.getModelLocation(SuperArchitectBlocks.MONITOR)))
+                .with(PropertyDispatch.property(HorizontalDirectionalBlock.FACING)
+                    .select(Direction.NORTH, Variant.variant().with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0))
+                    .select(Direction.EAST, Variant.variant().with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90))
+                    .select(Direction.SOUTH, Variant.variant().with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180))
+                    .select(Direction.WEST, Variant.variant().with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270))
+                )
+        );
+        blockStateModelGenerator.delegateItemModel(SuperArchitectBlocks.MONITOR, ModelLocationUtils.getModelLocation(SuperArchitectBlocks.MONITOR));
     }
 
     @Override

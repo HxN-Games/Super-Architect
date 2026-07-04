@@ -1,0 +1,24 @@
+{
+	"format_version": "1.9.0",
+	"texture_size": [34, 18],
+	"textures": {
+		"0": "super_architect:block/monitor",
+		"particle": "super_architect:block/monitor"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 14],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 14]},
+			"faces": {
+				"north": {"uv": [0, 0, 7.52941, 14.22222], "texture": "#0"},
+				"east": {"uv": [7.52941, 0, 8.47059, 14.22222], "texture": "#0"},
+				"south": {"uv": [8.47059, 0, 16, 14.22222], "texture": "#0"},
+				"west": {"uv": [7.52941, 0, 8.47059, 14.22222], "texture": "#0", "cullface": "east"},
+				"up": {"uv": [0, 14.22222, 7.52941, 16], "texture": "#0", "cullface": "east"},
+				"down": {"uv": [7.52941, 14.22222, 15.05882, 16], "texture": "#0", "cullface": "east"}
+			}
+		}
+	],
+	"display": {}
+}

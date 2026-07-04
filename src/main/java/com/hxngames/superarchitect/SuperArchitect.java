@@ -19,6 +19,19 @@ public class SuperArchitect implements ModInitializer {
         SuperArchitectBlockEntities.initialize();
         SuperArchitectMenus.initialize();
 
+        net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry.playC2S().register(
+                com.hxngames.superarchitect.network.MonitorSearchPacket.TYPE,
+                com.hxngames.superarchitect.network.MonitorSearchPacket.CODEC
+        );
+        net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking.registerGlobalReceiver(
+                com.hxngames.superarchitect.network.MonitorSearchPacket.TYPE,
+                (payload, context) -> {
+                    if (context.player().containerMenu instanceof com.hxngames.superarchitect.menus.MonitorMenu menu) {
+                        menu.setSearchQuery(payload.query());
+                    }
+                }
+        );
+
         LOGGER.info("SuperArchitect Initialized!");
     }
 }

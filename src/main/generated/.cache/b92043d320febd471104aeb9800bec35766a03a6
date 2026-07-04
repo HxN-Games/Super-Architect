@@ -1,5 +1,7 @@
-// 1.21	2026-07-04T17:44:18.100045	Super Architect/Model Definitions
+// 1.21	2026-07-04T20:19:52.693135	Super Architect/Model Definitions
 ff85c641239dbfbb371917fed922d894f6679105 assets/super_architect/models/item/disk_256.json
+eb5f554ba44a04766c3ba79cdcf7889d7645aae5 assets/super_architect/blockstates/monitor.json
+73efaa99e94349d7f768731c93c78a424b68d5dd assets/super_architect/models/item/monitor.json
 ac3dfd25baafafd7b7549c1b9af78e129fb41d68 assets/super_architect/models/item/disk_1024.json
 9e5f5d64374348adaf071ee4efa89550216b7e8a assets/super_architect/models/item/disk_512.json
 092a5b71fc40156cb1a5bbba12049ce54f2df9be assets/super_architect/models/item/disk_4096.json

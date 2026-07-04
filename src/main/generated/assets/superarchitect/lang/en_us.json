@@ -10,5 +10,6 @@
   "item.super_architect.disk_512": "Disk 512",
   "item.super_architect.disk_8192": "Disk 8k",
   "itemTooltip.super_architect.disk": "Size %1$s/%2$s items",
-  "itemTooltip.super_architect.disk_full": "Size %1$s/%2$s items (Full)"
+  "itemTooltip.super_architect.disk_full": "Size %1$s/%2$s items (Full)",
+  "itemgroup.super_architect.main": "Super Architect"
 }

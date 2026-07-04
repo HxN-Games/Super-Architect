@@ -16,6 +16,7 @@ public class SuperArchitect implements ModInitializer {
     public void onInitialize() {
         SuperArchitectItems.initialize();
         SuperArchitectBlocks.initialize();
+        com.hxngames.superarchitect.items.SuperArchitectItemGroups.initialize();
         SuperArchitectBlockEntities.initialize();
         SuperArchitectMenus.initialize();
 

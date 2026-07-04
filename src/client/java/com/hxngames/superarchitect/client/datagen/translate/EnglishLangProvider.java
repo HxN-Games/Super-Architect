@@ -33,6 +33,7 @@ public class EnglishLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add("itemTooltip.super_architect.disk", "Size %1$s/%2$s items");
         translationBuilder.add("itemTooltip.super_architect.disk_full", "Size %1$s/%2$s items (Full)");
+        translationBuilder.add("itemgroup.super_architect.main", "Super Architect");
     }
 
 

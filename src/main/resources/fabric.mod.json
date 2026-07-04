@@ -3,7 +3,7 @@
   "id": "superarchitect",
   "version": "${version}",
   "name": "Super Architect",
-  "description": "A storage mod",
+  "description": "Minecraft tech mod for building centralized, multi-block digital storage networks with an advanced, searchable UI.",
   "authors": [
     "HxN Games"
   ],

@@ -1,31 +1,39 @@
 package com.hxngames.superarchitect.blocks;
 
+import com.hxngames.superarchitect.blockentities.DiskRackBlockEntity;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.Containers;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-public class DiskRackBlock extends Block {
+public class DiskRackBlock extends Block implements EntityBlock {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final IntegerProperty BAY1 = IntegerProperty.create("bay1", 0, 3);
     public static final IntegerProperty BAY2 = IntegerProperty.create("bay2", 0, 3);
     public static final IntegerProperty BAY3 = IntegerProperty.create("bay3", 0, 3);
     public static final IntegerProperty BAY4 = IntegerProperty.create("bay4", 0, 3);
 
-    public static final net.minecraft.world.level.block.state.properties.BooleanProperty CONNECTED_LEFT = net.minecraft.world.level.block.state.properties.BooleanProperty.create("connected_left");
-    public static final net.minecraft.world.level.block.state.properties.BooleanProperty CONNECTED_RIGHT = net.minecraft.world.level.block.state.properties.BooleanProperty.create("connected_right");
-    public static final net.minecraft.world.level.block.state.properties.BooleanProperty CONNECTED_UP = net.minecraft.world.level.block.state.properties.BooleanProperty.create("connected_up");
-    public static final net.minecraft.world.level.block.state.properties.BooleanProperty CONNECTED_DOWN = net.minecraft.world.level.block.state.properties.BooleanProperty.create("connected_down");
+    public static final BooleanProperty CONNECTED_LEFT = BooleanProperty.create("connected_left");
+    public static final BooleanProperty CONNECTED_RIGHT = BooleanProperty.create("connected_right");
+    public static final BooleanProperty CONNECTED_UP = BooleanProperty.create("connected_up");
+    public static final BooleanProperty CONNECTED_DOWN = BooleanProperty.create("connected_down");
 
     public DiskRackBlock() {
         super(
@@ -67,7 +75,7 @@ public class DiskRackBlock extends Block {
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, net.minecraft.world.level.LevelAccessor level, net.minecraft.core.BlockPos currentPos, net.minecraft.core.BlockPos neighborPos) {
+    public @NotNull BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos currentPos, BlockPos neighborPos) {
         Direction facing = state.getValue(FACING);
         if (direction == facing.getClockWise()) {
             return state.setValue(CONNECTED_LEFT, neighborState.is(this) && neighborState.getValue(FACING) == facing);
@@ -97,5 +105,34 @@ public class DiskRackBlock extends Block {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING, BAY1, BAY2, BAY3, BAY4, CONNECTED_LEFT, CONNECTED_RIGHT, CONNECTED_UP, CONNECTED_DOWN);
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(net.minecraft.core.BlockPos pos, BlockState state) {
+        return new DiskRackBlockEntity(pos, state);
+    }
+
+    @Override
+    protected @NotNull InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (!level.isClientSide) {
+            BlockEntity blockEntity = level.getBlockEntity(pos);
+            if (blockEntity instanceof DiskRackBlockEntity diskRack) {
+                player.openMenu(diskRack);
+            }
+        }
+        return InteractionResult.sidedSuccess(level.isClientSide);
+    }
+
+    @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
+        if (state.getBlock() != newState.getBlock()) {
+            BlockEntity blockEntity = level.getBlockEntity(pos);
+            if (blockEntity instanceof DiskRackBlockEntity diskRack) {
+                Containers.dropContents(level, pos, diskRack.getInventory());
+                level.updateNeighbourForOutputSignal(pos, this);
+            }
+            super.onRemove(state, level, pos, newState, isMoving);
+        }
     }
 }

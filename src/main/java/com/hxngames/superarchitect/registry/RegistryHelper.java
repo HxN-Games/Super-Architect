@@ -116,5 +116,17 @@ public class RegistryHelper {
     public static ResourceLocation getIdentifier(Block block) {
         return BuiltInRegistries.BLOCK.getKey(block);
     }
+
+    /**
+     * Registers a MenuType to the Minecraft menu registry.
+     *
+     * @param modId    The Mod ID registering the menu type.
+     * @param name     The name (path) of the menu type.
+     * @param menuType The menu type instance to register.
+     * @return The registered menu type.
+     */
+    public static <T extends net.minecraft.world.inventory.AbstractContainerMenu> net.minecraft.world.inventory.MenuType<T> registerMenuType(String modId, String name, net.minecraft.world.inventory.MenuType<T> menuType) {
+        return Registry.register(BuiltInRegistries.MENU, ResourceLocation.fromNamespaceAndPath(modId, name), menuType);
+    }
 }
 

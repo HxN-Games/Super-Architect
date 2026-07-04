@@ -25,7 +25,5 @@ public class SuperArchitectItems {
                     .build()
     );
 
-    public void initialize() {
-        LOGGER.info("SuperArchitect items Initialized!");
-    }
+    public static void initialize() {}
 }

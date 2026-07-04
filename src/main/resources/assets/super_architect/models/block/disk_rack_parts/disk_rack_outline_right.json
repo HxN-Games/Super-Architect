@@ -1,0 +1,23 @@
+{
+	"textures": {
+		"0": "super_architect:block/disk_rack/disk_rack",
+		"1": "super_architect:block/disk_rack/disk_outline",
+		"particle": "super_architect:block/disk_rack/disk_rack"
+	},
+	"elements": [
+		{
+			"name": "right",
+			"from": [0, 0, 15],
+			"to": [1, 17, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 15]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 1], "texture": "#1"},
+				"east": {"uv": [5, 0, 6, 1], "texture": "#1"},
+				"south": {"uv": [2, 0, 3, 1], "texture": "#1"},
+				"west": {"uv": [3, 0, 4, 1], "texture": "#1"},
+				"up": {"uv": [4, 0, 5, 1], "texture": "#1"},
+				"down": {"uv": [1, 0, 2, 1], "texture": "#1"}
+			}
+		}
+	]
+}

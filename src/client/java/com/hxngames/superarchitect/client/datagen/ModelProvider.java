@@ -41,10 +41,50 @@ public class ModelProvider extends FabricModelProvider {
 
             // Base part
             multipart.with(
-                Condition.condition().term(HorizontalDirectionalBlock.FACING, dir),
-                Variant.variant()
-                    .with(VariantProperties.MODEL, ResourceLocation.fromNamespaceAndPath("super_architect", "block/disk_rack_parts/disk_rack_base"))
-                    .with(VariantProperties.Y_ROT, rot)
+                net.minecraft.data.models.blockstates.Condition.condition().term(net.minecraft.world.level.block.HorizontalDirectionalBlock.FACING, dir),
+                net.minecraft.data.models.blockstates.Variant.variant()
+                    .with(net.minecraft.data.models.blockstates.VariantProperties.MODEL, net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("super_architect", "block/disk_rack_parts/disk_rack_base"))
+                    .with(net.minecraft.data.models.blockstates.VariantProperties.Y_ROT, rot)
+            );
+
+            // Outline Left
+            multipart.with(
+                net.minecraft.data.models.blockstates.Condition.condition()
+                    .term(net.minecraft.world.level.block.HorizontalDirectionalBlock.FACING, dir)
+                    .term(com.hxngames.superarchitect.blocks.DiskRackBlock.CONNECTED_LEFT, false),
+                net.minecraft.data.models.blockstates.Variant.variant()
+                    .with(net.minecraft.data.models.blockstates.VariantProperties.MODEL, net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("super_architect", "block/disk_rack_parts/disk_rack_outline_left"))
+                    .with(net.minecraft.data.models.blockstates.VariantProperties.Y_ROT, rot)
+            );
+
+            // Outline Right
+            multipart.with(
+                net.minecraft.data.models.blockstates.Condition.condition()
+                    .term(net.minecraft.world.level.block.HorizontalDirectionalBlock.FACING, dir)
+                    .term(com.hxngames.superarchitect.blocks.DiskRackBlock.CONNECTED_RIGHT, false),
+                net.minecraft.data.models.blockstates.Variant.variant()
+                    .with(net.minecraft.data.models.blockstates.VariantProperties.MODEL, net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("super_architect", "block/disk_rack_parts/disk_rack_outline_right"))
+                    .with(net.minecraft.data.models.blockstates.VariantProperties.Y_ROT, rot)
+            );
+
+            // Outline Top
+            multipart.with(
+                net.minecraft.data.models.blockstates.Condition.condition()
+                    .term(net.minecraft.world.level.block.HorizontalDirectionalBlock.FACING, dir)
+                    .term(com.hxngames.superarchitect.blocks.DiskRackBlock.CONNECTED_UP, false),
+                net.minecraft.data.models.blockstates.Variant.variant()
+                    .with(net.minecraft.data.models.blockstates.VariantProperties.MODEL, net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("super_architect", "block/disk_rack_parts/disk_rack_outline_top"))
+                    .with(net.minecraft.data.models.blockstates.VariantProperties.Y_ROT, rot)
+            );
+
+            // Outline Bottom
+            multipart.with(
+                net.minecraft.data.models.blockstates.Condition.condition()
+                    .term(net.minecraft.world.level.block.HorizontalDirectionalBlock.FACING, dir)
+                    .term(com.hxngames.superarchitect.blocks.DiskRackBlock.CONNECTED_DOWN, false),
+                net.minecraft.data.models.blockstates.Variant.variant()
+                    .with(net.minecraft.data.models.blockstates.VariantProperties.MODEL, net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("super_architect", "block/disk_rack_parts/disk_rack_outline_bottom"))
+                    .with(net.minecraft.data.models.blockstates.VariantProperties.Y_ROT, rot)
             );
 
             // Bay parts

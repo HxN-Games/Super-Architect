@@ -11,6 +11,46 @@
     },
     {
       "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_left",
+        "y": 90
+      },
+      "when": {
+        "connected_left": "false",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_right",
+        "y": 90
+      },
+      "when": {
+        "connected_right": "false",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_top",
+        "y": 90
+      },
+      "when": {
+        "connected_up": "false",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_bottom",
+        "y": 90
+      },
+      "when": {
+        "connected_down": "false",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
         "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage0",
         "y": 90
       },
@@ -175,6 +215,46 @@
         "y": 270
       },
       "when": {
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_left",
+        "y": 270
+      },
+      "when": {
+        "connected_left": "false",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_right",
+        "y": 270
+      },
+      "when": {
+        "connected_right": "false",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_top",
+        "y": 270
+      },
+      "when": {
+        "connected_up": "false",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_bottom",
+        "y": 270
+      },
+      "when": {
+        "connected_down": "false",
         "facing": "south"
       }
     },
@@ -344,6 +424,46 @@
         "y": 0
       },
       "when": {
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_left",
+        "y": 0
+      },
+      "when": {
+        "connected_left": "false",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_right",
+        "y": 0
+      },
+      "when": {
+        "connected_right": "false",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_top",
+        "y": 0
+      },
+      "when": {
+        "connected_up": "false",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_bottom",
+        "y": 0
+      },
+      "when": {
+        "connected_down": "false",
         "facing": "west"
       }
     },
@@ -513,6 +633,46 @@
         "y": 180
       },
       "when": {
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_left",
+        "y": 180
+      },
+      "when": {
+        "connected_left": "false",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_right",
+        "y": 180
+      },
+      "when": {
+        "connected_right": "false",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_top",
+        "y": 180
+      },
+      "when": {
+        "connected_up": "false",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_outline_bottom",
+        "y": 180
+      },
+      "when": {
+        "connected_down": "false",
         "facing": "east"
       }
     },

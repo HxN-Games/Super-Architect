@@ -22,6 +22,11 @@ public class DiskRackBlock extends Block {
     public static final IntegerProperty BAY3 = IntegerProperty.create("bay3", 0, 3);
     public static final IntegerProperty BAY4 = IntegerProperty.create("bay4", 0, 3);
 
+    public static final net.minecraft.world.level.block.state.properties.BooleanProperty CONNECTED_LEFT = net.minecraft.world.level.block.state.properties.BooleanProperty.create("connected_left");
+    public static final net.minecraft.world.level.block.state.properties.BooleanProperty CONNECTED_RIGHT = net.minecraft.world.level.block.state.properties.BooleanProperty.create("connected_right");
+    public static final net.minecraft.world.level.block.state.properties.BooleanProperty CONNECTED_UP = net.minecraft.world.level.block.state.properties.BooleanProperty.create("connected_up");
+    public static final net.minecraft.world.level.block.state.properties.BooleanProperty CONNECTED_DOWN = net.minecraft.world.level.block.state.properties.BooleanProperty.create("connected_down");
+
     public DiskRackBlock() {
         super(
                 BlockBehaviour.Properties.of()
@@ -34,14 +39,50 @@ public class DiskRackBlock extends Block {
                 .setValue(BAY1, 0)
                 .setValue(BAY2, 0)
                 .setValue(BAY3, 0)
-                .setValue(BAY4, 0));
+                .setValue(BAY4, 0)
+                .setValue(CONNECTED_LEFT, false)
+                .setValue(CONNECTED_RIGHT, false)
+                .setValue(CONNECTED_UP, false)
+                .setValue(CONNECTED_DOWN, false));
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext blockPlaceContext) {
-        return this.defaultBlockState().setValue(FACING, blockPlaceContext.getHorizontalDirection().getOpposite());
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        Direction facing = context.getHorizontalDirection().getOpposite();
+        boolean connectedLeft = context.getLevel().getBlockState(context.getClickedPos().relative(facing.getClockWise())).is(this) 
+            && context.getLevel().getBlockState(context.getClickedPos().relative(facing.getClockWise())).getValue(FACING) == facing;
+        boolean connectedRight = context.getLevel().getBlockState(context.getClickedPos().relative(facing.getCounterClockWise())).is(this)
+            && context.getLevel().getBlockState(context.getClickedPos().relative(facing.getCounterClockWise())).getValue(FACING) == facing;
+        boolean connectedUp = context.getLevel().getBlockState(context.getClickedPos().relative(Direction.UP)).is(this)
+            && context.getLevel().getBlockState(context.getClickedPos().relative(Direction.UP)).getValue(FACING) == facing;
+        boolean connectedDown = context.getLevel().getBlockState(context.getClickedPos().relative(Direction.DOWN)).is(this)
+            && context.getLevel().getBlockState(context.getClickedPos().relative(Direction.DOWN)).getValue(FACING) == facing;
+        
+        return this.defaultBlockState()
+                .setValue(FACING, facing)
+                .setValue(CONNECTED_LEFT, connectedLeft)
+                .setValue(CONNECTED_RIGHT, connectedRight)
+                .setValue(CONNECTED_UP, connectedUp)
+                .setValue(CONNECTED_DOWN, connectedDown);
     }
 
+    @Override
+    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, net.minecraft.world.level.LevelAccessor level, net.minecraft.core.BlockPos currentPos, net.minecraft.core.BlockPos neighborPos) {
+        Direction facing = state.getValue(FACING);
+        if (direction == facing.getClockWise()) {
+            return state.setValue(CONNECTED_LEFT, neighborState.is(this) && neighborState.getValue(FACING) == facing);
+        }
+        if (direction == facing.getCounterClockWise()) {
+            return state.setValue(CONNECTED_RIGHT, neighborState.is(this) && neighborState.getValue(FACING) == facing);
+        }
+        if (direction == Direction.UP) {
+            return state.setValue(CONNECTED_UP, neighborState.is(this) && neighborState.getValue(FACING) == facing);
+        }
+        if (direction == Direction.DOWN) {
+            return state.setValue(CONNECTED_DOWN, neighborState.is(this) && neighborState.getValue(FACING) == facing);
+        }
+        return super.updateShape(state, direction, neighborState, level, currentPos, neighborPos);
+    }
 
     @Override
     protected @NotNull BlockState rotate(BlockState blockState, Rotation rotation) {
@@ -55,6 +96,6 @@ public class DiskRackBlock extends Block {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, BAY1, BAY2, BAY3, BAY4);
+        builder.add(FACING, BAY1, BAY2, BAY3, BAY4, CONNECTED_LEFT, CONNECTED_RIGHT, CONNECTED_UP, CONNECTED_DOWN);
     }
 }

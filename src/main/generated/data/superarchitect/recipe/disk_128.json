@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "super_architect:chip"
+    },
+    "r": {
+      "item": "minecraft:redstone"
+    },
+    "s": {
+      "item": "super_architect:silicon"
+    }
+  },
+  "pattern": [
+    "srs",
+    "rcr",
+    "srs"
+  ],
+  "result": {
+    "count": 1,
+    "id": "super_architect:disk_128"
+  }
+}

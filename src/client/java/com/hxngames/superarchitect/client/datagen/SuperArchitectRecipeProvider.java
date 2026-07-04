@@ -131,5 +131,15 @@ public class SuperArchitectRecipeProvider extends FabricRecipeProvider {
                 .define('d', SuperArchitectItems.DISK_4k)
                 .unlockedBy(getHasName(SuperArchitectItems.DISK_4k), has(SuperArchitectItems.DISK_4k))
                 .save(exporter);
+        // Base Disk 128
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_128, 1)
+                .pattern("srs")
+                .pattern("rcr")
+                .pattern("srs")
+                .define('s', SuperArchitectItems.SILICON)
+                .define('r', Items.REDSTONE)
+                .define('c', SuperArchitectItems.CHIP)
+                .unlockedBy(getHasName(SuperArchitectItems.CHIP), has(SuperArchitectItems.CHIP))
+                .save(exporter);
     }
 }

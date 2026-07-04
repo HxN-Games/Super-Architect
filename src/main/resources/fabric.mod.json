@@ -13,7 +13,7 @@
     "issues": "https://github.com/HxN-Games/Super-Architect/issues"
   },
   "license": "MIT",
-  "icon": "assets/superarchitect/icon.png",
+  "icon": "assets/super_architect/icon.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [

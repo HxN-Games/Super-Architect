@@ -29,6 +29,7 @@ public class EnglishLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(blocks.DISK_RACK, "Disk Rack");
         translationBuilder.add(blocks.MONITOR, "Monitor");
+        translationBuilder.add(blocks.PIPE, "Network Pipe");
 
         translationBuilder.add("itemTooltip.super_architect.disk", "Size %1$s/%2$s items");
         translationBuilder.add("itemTooltip.super_architect.disk_full", "Size %1$s/%2$s items (Full)");

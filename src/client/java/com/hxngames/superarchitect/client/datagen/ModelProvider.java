@@ -15,6 +15,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
+import static com.hxngames.superarchitect.SuperArchitect.MOD_ID;
+
 public class ModelProvider extends FabricModelProvider {
     public ModelProvider(FabricDataOutput output) {
         super(output);
@@ -106,6 +108,20 @@ public class ModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.delegateItemModel(SuperArchitectBlocks.DISK_RACK, ModelLocationUtils.getModelLocation(SuperArchitectBlocks.DISK_RACK));
 
+        // Pipe Block
+        var pipeMultipart = MultiPartGenerator.multiPart(SuperArchitectBlocks.PIPE);
+
+        pipeMultipart.with(Variant.variant().with(VariantProperties.MODEL, ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/pipe_core")));
+        pipeMultipart.with(Condition.condition().term(com.hxngames.superarchitect.blocks.PipeBlock.UP, true), Variant.variant().with(VariantProperties.MODEL, ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/pipe_up")));
+        pipeMultipart.with(Condition.condition().term(com.hxngames.superarchitect.blocks.PipeBlock.DOWN, true), Variant.variant().with(VariantProperties.MODEL, ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/pipe_down")));
+        pipeMultipart.with(Condition.condition().term(com.hxngames.superarchitect.blocks.PipeBlock.NORTH, true), Variant.variant().with(VariantProperties.MODEL, ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/pipe_north")));
+        pipeMultipart.with(Condition.condition().term(com.hxngames.superarchitect.blocks.PipeBlock.EAST, true), Variant.variant().with(VariantProperties.MODEL, ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/pipe_east")));
+        pipeMultipart.with(Condition.condition().term(com.hxngames.superarchitect.blocks.PipeBlock.SOUTH, true), Variant.variant().with(VariantProperties.MODEL, ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/pipe_south")));
+        pipeMultipart.with(Condition.condition().term(com.hxngames.superarchitect.blocks.PipeBlock.WEST, true), Variant.variant().with(VariantProperties.MODEL, ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/pipe_west")));
+
+        blockStateModelGenerator.blockStateOutput.accept(pipeMultipart);
+        blockStateModelGenerator.delegateItemModel(SuperArchitectBlocks.PIPE, ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/pipe_core"));
+
         // Monitor Block
         blockStateModelGenerator.blockStateOutput.accept(
             MultiVariantGenerator.multiVariant(SuperArchitectBlocks.MONITOR, Variant.variant().with(VariantProperties.MODEL, ModelLocationUtils.getModelLocation(SuperArchitectBlocks.MONITOR)))
@@ -128,5 +144,7 @@ public class ModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(SuperArchitectItems.DISK_2k, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(SuperArchitectItems.DISK_4k, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(SuperArchitectItems.DISK_8k, ModelTemplates.FLAT_ITEM);
+
+
     }
 }

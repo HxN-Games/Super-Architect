@@ -1,6 +1,7 @@
 {
   "block.super_architect.disk_rack": "Disk Rack",
   "block.super_architect.monitor": "Monitor",
+  "block.super_architect.pipe": "Network Pipe",
   "item.super_architect.disk_1024": "Disk 1k",
   "item.super_architect.disk_128": "Disk 128",
   "item.super_architect.disk_2048": "Disk 2k",

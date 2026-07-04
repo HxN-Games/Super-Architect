@@ -1,0 +1,57 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "super_architect:block/pipe_core"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/pipe_up"
+      },
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/pipe_down"
+      },
+      "when": {
+        "down": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/pipe_north"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/pipe_east"
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/pipe_south"
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/pipe_west"
+      },
+      "when": {
+        "west": "true"
+      }
+    }
+  ]
+}

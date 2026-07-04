@@ -45,13 +45,15 @@ public class MonitorBlockEntity extends BlockEntity implements MenuProvider {
             for (Direction dir : Direction.values()) {
                 BlockPos neighborPos = current.relative(dir);
                 if (!visited.contains(neighborPos)) {
+                    net.minecraft.world.level.block.Block block = this.level.getBlockState(neighborPos).getBlock();
                     BlockEntity be = this.level.getBlockEntity(neighborPos);
+                    
                     if (be instanceof DiskRackBlockEntity rack) {
                         visited.add(neighborPos);
                         queue.add(neighborPos);
                         racks.add(rack);
-                    } else if (be instanceof MonitorBlockEntity) {
-                        // Monitors also connect the network
+                    } else if (be instanceof MonitorBlockEntity || block instanceof com.hxngames.superarchitect.blocks.PipeBlock) {
+                        // Monitors and Pipes also connect the network
                         visited.add(neighborPos);
                         queue.add(neighborPos);
                     }

@@ -1,0 +1,85 @@
+{
+    "textures": {
+        "bay": "super_architect:block/disk_rack/disk_bay_2"
+    },
+    "elements": [
+        {
+            "name": "bay4",
+            "from": [
+                0,
+                1.5,
+                2
+            ],
+            "to": [
+                2,
+                3.5,
+                14
+            ],
+            "rotation": {
+                "angle": 0,
+                "axis": "y",
+                "origin": [
+                    0,
+                    2.5,
+                    2
+                ]
+            },
+            "faces": {
+                "north": {
+                    "uv": [
+                        4,
+                        4,
+                        6,
+                        6
+                    ],
+                    "texture": "#bay"
+                },
+                "east": {
+                    "uv": [
+                        0,
+                        0,
+                        12,
+                        2
+                    ],
+                    "texture": "#bay"
+                },
+                "south": {
+                    "uv": [
+                        4,
+                        6,
+                        6,
+                        8
+                    ],
+                    "texture": "#bay"
+                },
+                "west": {
+                    "uv": [
+                        0,
+                        2,
+                        12,
+                        4
+                    ],
+                    "texture": "#bay"
+                },
+                "up": {
+                    "uv": [
+                        0,
+                        4,
+                        2,
+                        16
+                    ],
+                    "texture": "#bay"
+                },
+                "down": {
+                    "uv": [
+                        2,
+                        4,
+                        4,
+                        16
+                    ],
+                    "texture": "#bay"
+                }
+            }
+        }
+    ]
+}

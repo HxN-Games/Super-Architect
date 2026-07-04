@@ -1,0 +1,680 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_base",
+        "y": 90
+      },
+      "when": {
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage0",
+        "y": 90
+      },
+      "when": {
+        "bay1": "0",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage1",
+        "y": 90
+      },
+      "when": {
+        "bay1": "1",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage2",
+        "y": 90
+      },
+      "when": {
+        "bay1": "2",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage3",
+        "y": 90
+      },
+      "when": {
+        "bay1": "3",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage0",
+        "y": 90
+      },
+      "when": {
+        "bay2": "0",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage1",
+        "y": 90
+      },
+      "when": {
+        "bay2": "1",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage2",
+        "y": 90
+      },
+      "when": {
+        "bay2": "2",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage3",
+        "y": 90
+      },
+      "when": {
+        "bay2": "3",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage0",
+        "y": 90
+      },
+      "when": {
+        "bay3": "0",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage1",
+        "y": 90
+      },
+      "when": {
+        "bay3": "1",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage2",
+        "y": 90
+      },
+      "when": {
+        "bay3": "2",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage3",
+        "y": 90
+      },
+      "when": {
+        "bay3": "3",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage0",
+        "y": 90
+      },
+      "when": {
+        "bay4": "0",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage1",
+        "y": 90
+      },
+      "when": {
+        "bay4": "1",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage2",
+        "y": 90
+      },
+      "when": {
+        "bay4": "2",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage3",
+        "y": 90
+      },
+      "when": {
+        "bay4": "3",
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_base",
+        "y": 270
+      },
+      "when": {
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage0",
+        "y": 270
+      },
+      "when": {
+        "bay1": "0",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage1",
+        "y": 270
+      },
+      "when": {
+        "bay1": "1",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage2",
+        "y": 270
+      },
+      "when": {
+        "bay1": "2",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage3",
+        "y": 270
+      },
+      "when": {
+        "bay1": "3",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage0",
+        "y": 270
+      },
+      "when": {
+        "bay2": "0",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage1",
+        "y": 270
+      },
+      "when": {
+        "bay2": "1",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage2",
+        "y": 270
+      },
+      "when": {
+        "bay2": "2",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage3",
+        "y": 270
+      },
+      "when": {
+        "bay2": "3",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage0",
+        "y": 270
+      },
+      "when": {
+        "bay3": "0",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage1",
+        "y": 270
+      },
+      "when": {
+        "bay3": "1",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage2",
+        "y": 270
+      },
+      "when": {
+        "bay3": "2",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage3",
+        "y": 270
+      },
+      "when": {
+        "bay3": "3",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage0",
+        "y": 270
+      },
+      "when": {
+        "bay4": "0",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage1",
+        "y": 270
+      },
+      "when": {
+        "bay4": "1",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage2",
+        "y": 270
+      },
+      "when": {
+        "bay4": "2",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage3",
+        "y": 270
+      },
+      "when": {
+        "bay4": "3",
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_base",
+        "y": 0
+      },
+      "when": {
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage0",
+        "y": 0
+      },
+      "when": {
+        "bay1": "0",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage1",
+        "y": 0
+      },
+      "when": {
+        "bay1": "1",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage2",
+        "y": 0
+      },
+      "when": {
+        "bay1": "2",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage3",
+        "y": 0
+      },
+      "when": {
+        "bay1": "3",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage0",
+        "y": 0
+      },
+      "when": {
+        "bay2": "0",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage1",
+        "y": 0
+      },
+      "when": {
+        "bay2": "1",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage2",
+        "y": 0
+      },
+      "when": {
+        "bay2": "2",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage3",
+        "y": 0
+      },
+      "when": {
+        "bay2": "3",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage0",
+        "y": 0
+      },
+      "when": {
+        "bay3": "0",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage1",
+        "y": 0
+      },
+      "when": {
+        "bay3": "1",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage2",
+        "y": 0
+      },
+      "when": {
+        "bay3": "2",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage3",
+        "y": 0
+      },
+      "when": {
+        "bay3": "3",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage0",
+        "y": 0
+      },
+      "when": {
+        "bay4": "0",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage1",
+        "y": 0
+      },
+      "when": {
+        "bay4": "1",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage2",
+        "y": 0
+      },
+      "when": {
+        "bay4": "2",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage3",
+        "y": 0
+      },
+      "when": {
+        "bay4": "3",
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_base",
+        "y": 180
+      },
+      "when": {
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage0",
+        "y": 180
+      },
+      "when": {
+        "bay1": "0",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage1",
+        "y": 180
+      },
+      "when": {
+        "bay1": "1",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage2",
+        "y": 180
+      },
+      "when": {
+        "bay1": "2",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay1_stage3",
+        "y": 180
+      },
+      "when": {
+        "bay1": "3",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage0",
+        "y": 180
+      },
+      "when": {
+        "bay2": "0",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage1",
+        "y": 180
+      },
+      "when": {
+        "bay2": "1",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage2",
+        "y": 180
+      },
+      "when": {
+        "bay2": "2",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay2_stage3",
+        "y": 180
+      },
+      "when": {
+        "bay2": "3",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage0",
+        "y": 180
+      },
+      "when": {
+        "bay3": "0",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage1",
+        "y": 180
+      },
+      "when": {
+        "bay3": "1",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage2",
+        "y": 180
+      },
+      "when": {
+        "bay3": "2",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay3_stage3",
+        "y": 180
+      },
+      "when": {
+        "bay3": "3",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage0",
+        "y": 180
+      },
+      "when": {
+        "bay4": "0",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage1",
+        "y": 180
+      },
+      "when": {
+        "bay4": "1",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage2",
+        "y": 180
+      },
+      "when": {
+        "bay4": "2",
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "super_architect:block/disk_rack_parts/disk_rack_bay4_stage3",
+        "y": 180
+      },
+      "when": {
+        "bay4": "3",
+        "facing": "east"
+      }
+    }
+  ]
+}

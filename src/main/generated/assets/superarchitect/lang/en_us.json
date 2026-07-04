@@ -1,0 +1,12 @@
+{
+  "block.super_architect.disk_rack": "Disk Rack",
+  "item.super_architect.disk_1024": "Disk 1k",
+  "item.super_architect.disk_128": "Disk 128",
+  "item.super_architect.disk_2048": "Disk 2k",
+  "item.super_architect.disk_256": "Disk 256",
+  "item.super_architect.disk_4096": "Disk 4k",
+  "item.super_architect.disk_512": "Disk 512",
+  "item.super_architect.disk_8192": "Disk 8k",
+  "itemTooltip.super_architect.disk": "Size %1$s/%2$s items",
+  "itemTooltip.super_architect.disk_full": "Size %1$s/%2$s items (Full)"
+}

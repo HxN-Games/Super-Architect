@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "superarchitect",
+  "version": "${version}",
+  "name": "Super Architect",
+  "description": "A storage mod",
+  "authors": [
+    "HxN Games"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/project/super-architect",
+    "sources": "https://github.com/HxN-Games/Super-Architect",
+    "issues": "https://github.com/HxN-Games/Super-Architect/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/superarchitect/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.hxngames.superarchitect.client.SuperArchitectDataGenerator"
+    ],
+    "client": [
+      "com.hxngames.superarchitect.client.SuperArchitectClient"
+    ],
+    "main": [
+      "com.hxngames.superarchitect.SuperArchitect"
+    ]
+  },
+  "mixins": [
+    "superarchitect.mixins.json",
+    {
+      "config": "superarchitect.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

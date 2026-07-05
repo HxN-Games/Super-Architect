@@ -2,9 +2,15 @@ package com.hxngames.superarchitect;
 
 import com.hxngames.superarchitect.blockentities.SuperArchitectBlockEntities;
 import com.hxngames.superarchitect.blocks.SuperArchitectBlocks;
+import com.hxngames.superarchitect.items.SuperArchitectItemGroups;
 import com.hxngames.superarchitect.items.SuperArchitectItems;
+import com.hxngames.superarchitect.menus.MonitorMenu;
 import com.hxngames.superarchitect.menus.SuperArchitectMenus;
+import com.hxngames.superarchitect.network.MonitorSearchPacket;
+import com.hxngames.superarchitect.recipes.SuperArchitectRecipes;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,18 +22,19 @@ public class SuperArchitect implements ModInitializer {
     public void onInitialize() {
         SuperArchitectItems.initialize();
         SuperArchitectBlocks.initialize();
-        com.hxngames.superarchitect.items.SuperArchitectItemGroups.initialize();
+        SuperArchitectItemGroups.initialize();
         SuperArchitectBlockEntities.initialize();
         SuperArchitectMenus.initialize();
+        SuperArchitectRecipes.initialize();
 
-        net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry.playC2S().register(
-                com.hxngames.superarchitect.network.MonitorSearchPacket.TYPE,
-                com.hxngames.superarchitect.network.MonitorSearchPacket.CODEC
+        PayloadTypeRegistry.playC2S().register(
+                MonitorSearchPacket.TYPE,
+                MonitorSearchPacket.CODEC
         );
-        net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking.registerGlobalReceiver(
-                com.hxngames.superarchitect.network.MonitorSearchPacket.TYPE,
+        ServerPlayNetworking.registerGlobalReceiver(
+                MonitorSearchPacket.TYPE,
                 (payload, context) -> {
-                    if (context.player().containerMenu instanceof com.hxngames.superarchitect.menus.MonitorMenu menu) {
+                    if (context.player().containerMenu instanceof MonitorMenu menu) {
                         menu.setSearchQuery(payload.query());
                     }
                 }

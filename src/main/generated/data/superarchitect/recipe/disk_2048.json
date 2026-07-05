@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "super_architect:disk_upgrade",
   "category": "misc",
   "key": {
     "d": {

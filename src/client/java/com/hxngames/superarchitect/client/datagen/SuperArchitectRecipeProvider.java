@@ -2,12 +2,20 @@ package com.hxngames.superarchitect.client.datagen;
 
 import com.hxngames.superarchitect.blocks.SuperArchitectBlocks;
 import com.hxngames.superarchitect.items.SuperArchitectItems;
+import com.hxngames.superarchitect.recipes.DiskUpgradeRecipe;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.ShapedRecipe;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -66,6 +74,23 @@ public class SuperArchitectRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(SuperArchitectItems.SILICON), has(SuperArchitectItems.SILICON))
                 .save(exporter);
 
+        RecipeOutput upgradeExporter = new RecipeOutput() {
+            @Override
+            public void accept(ResourceLocation id, Recipe<?> recipe, @Nullable AdvancementHolder advancement) {
+                if (recipe instanceof ShapedRecipe shaped) {
+                    DiskUpgradeRecipe upgradeRecipe = new DiskUpgradeRecipe(shaped);
+                    exporter.accept(id, upgradeRecipe, advancement);
+                } else {
+                    exporter.accept(id, recipe, advancement);
+                }
+            }
+
+            @Override
+            public Advancement.@NotNull Builder advancement() {
+                return exporter.advancement();
+            }
+        };
+
         // Disk 128 -> 256
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_256, 1)
                 .pattern("sms")
@@ -75,7 +100,7 @@ public class SuperArchitectRecipeProvider extends FabricRecipeProvider {
                 .define('m', Items.COPPER_INGOT)
                 .define('d', SuperArchitectItems.DISK_128)
                 .unlockedBy(getHasName(SuperArchitectItems.DISK_128), has(SuperArchitectItems.DISK_128))
-                .save(exporter);
+                .save(upgradeExporter);
 
         // Disk 256 -> 512
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_512, 1)
@@ -86,7 +111,7 @@ public class SuperArchitectRecipeProvider extends FabricRecipeProvider {
                 .define('m', Items.IRON_INGOT)
                 .define('d', SuperArchitectItems.DISK_256)
                 .unlockedBy(getHasName(SuperArchitectItems.DISK_256), has(SuperArchitectItems.DISK_256))
-                .save(exporter);
+                .save(upgradeExporter);
 
         // Disk 512 -> 1k
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_1k, 1)
@@ -97,7 +122,7 @@ public class SuperArchitectRecipeProvider extends FabricRecipeProvider {
                 .define('m', Items.GOLD_INGOT)
                 .define('d', SuperArchitectItems.DISK_512)
                 .unlockedBy(getHasName(SuperArchitectItems.DISK_512), has(SuperArchitectItems.DISK_512))
-                .save(exporter);
+                .save(upgradeExporter);
 
         // Disk 1k -> 2k
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_2k, 1)
@@ -108,7 +133,7 @@ public class SuperArchitectRecipeProvider extends FabricRecipeProvider {
                 .define('m', Items.EMERALD)
                 .define('d', SuperArchitectItems.DISK_1k)
                 .unlockedBy(getHasName(SuperArchitectItems.DISK_1k), has(SuperArchitectItems.DISK_1k))
-                .save(exporter);
+                .save(upgradeExporter);
 
         // Disk 2k -> 4k
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_4k, 1)
@@ -119,7 +144,7 @@ public class SuperArchitectRecipeProvider extends FabricRecipeProvider {
                 .define('m', Items.DIAMOND)
                 .define('d', SuperArchitectItems.DISK_2k)
                 .unlockedBy(getHasName(SuperArchitectItems.DISK_2k), has(SuperArchitectItems.DISK_2k))
-                .save(exporter);
+                .save(upgradeExporter);
 
         // Disk 4k -> 8k
         SmithingTransformRecipeBuilder.smithing(

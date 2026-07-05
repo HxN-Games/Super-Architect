@@ -20,6 +20,7 @@ public class SuperArchitectItemGroups {
                     .displayItems((displayContext, entries) -> {
                         entries.accept(SuperArchitectBlocks.DISK_RACK);
                         entries.accept(SuperArchitectBlocks.MONITOR);
+                        entries.accept(SuperArchitectBlocks.BLANK_MONITOR);
                         entries.accept(SuperArchitectBlocks.PIPE);
                         entries.accept(SuperArchitectItems.DISK_128);
                         entries.accept(SuperArchitectItems.DISK_256);

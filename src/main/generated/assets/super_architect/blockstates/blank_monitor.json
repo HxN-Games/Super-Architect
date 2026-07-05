@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "super_architect:block/blank_monitor",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "super_architect:block/blank_monitor",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "super_architect:block/blank_monitor",
+      "y": 0
+    },
+    "facing=south": {
+      "model": "super_architect:block/blank_monitor",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "super_architect:block/blank_monitor",
+      "x": 270
+    },
+    "facing=west": {
+      "model": "super_architect:block/blank_monitor",
+      "y": 270
+    }
+  }
+}

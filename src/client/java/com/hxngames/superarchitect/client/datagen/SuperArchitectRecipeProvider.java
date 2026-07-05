@@ -141,5 +141,25 @@ public class SuperArchitectRecipeProvider extends FabricRecipeProvider {
                 .define('c', SuperArchitectItems.CHIP)
                 .unlockedBy(getHasName(SuperArchitectItems.CHIP), has(SuperArchitectItems.CHIP))
                 .save(exporter);
+        // Blank Monitor
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectBlocks.BLANK_MONITOR, 1)
+                .pattern("ggg")
+                .pattern("gsg")
+                .pattern("ggg")
+                .define('g', Items.GLASS)
+                .define('s', SuperArchitectItems.SILICON)
+                .unlockedBy(getHasName(SuperArchitectItems.SILICON), has(SuperArchitectItems.SILICON))
+                .save(exporter);
+
+        // Monitor
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectBlocks.MONITOR, 1)
+                .pattern("cgc")
+                .pattern("gbg")
+                .pattern("cgc")
+                .define('c', SuperArchitectItems.CHIP)
+                .define('g', Items.GOLD_INGOT)
+                .define('b', SuperArchitectBlocks.BLANK_MONITOR)
+                .unlockedBy(getHasName(SuperArchitectBlocks.BLANK_MONITOR), has(SuperArchitectBlocks.BLANK_MONITOR))
+                .save(exporter);
     }
 }

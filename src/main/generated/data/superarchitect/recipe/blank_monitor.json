@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "g": {
+      "item": "minecraft:glass"
+    },
+    "s": {
+      "item": "super_architect:silicon"
+    }
+  },
+  "pattern": [
+    "ggg",
+    "gsg",
+    "ggg"
+  ],
+  "result": {
+    "count": 1,
+    "id": "super_architect:blank_monitor"
+  }
+}

@@ -1,8 +1,9 @@
-// 1.21	2026-07-05T00:18:53.717834	Super Architect/Model Definitions
+// 1.21	2026-07-05T10:04:04.283923	Super Architect/Model Definitions
 32afe0605a4b79285a16f22811061fa93c08e378 assets/super_architect/models/item/chip.json
 ef76bc4c7e32b5efb29a3f6c447005d32d27ea9d assets/super_architect/models/item/raw_silica.json
 10e475d5a54b8f279bf1ad05ebe008f92fb0f734 assets/super_architect/blockstates/monitor.json
 ac3dfd25baafafd7b7549c1b9af78e129fb41d68 assets/super_architect/models/item/disk_1024.json
+560613098eb2ec37c04605d124059fc9d77208ca assets/super_architect/models/item/blank_monitor.json
 092a5b71fc40156cb1a5bbba12049ce54f2df9be assets/super_architect/models/item/disk_4096.json
 d1954cf7592dee016cd17a095a549a01f0b44e5a assets/super_architect/models/item/disk_128.json
 597b3e34482aaa5b4a6029ec160bb3dd97c62ba7 assets/super_architect/blockstates/pipe.json
@@ -12,6 +13,7 @@ d1954cf7592dee016cd17a095a549a01f0b44e5a assets/super_architect/models/item/disk
 ff85c641239dbfbb371917fed922d894f6679105 assets/super_architect/models/item/disk_256.json
 73efaa99e94349d7f768731c93c78a424b68d5dd assets/super_architect/models/item/monitor.json
 9e5f5d64374348adaf071ee4efa89550216b7e8a assets/super_architect/models/item/disk_512.json
+09e30fca9b32f60cf68bfe8d26385a5341b23bd5 assets/super_architect/blockstates/blank_monitor.json
 15db19bcae90ad09ad8475f7c59496d35cfddeb0 assets/super_architect/models/item/silicon.json
 d4b037860187e128b8690e014f45a5e0770d0284 assets/super_architect/models/item/pipe.json
 7eeec02e5007ec4a27f84affee981815bc2ffd95 assets/super_architect/models/item/disk_2048.json

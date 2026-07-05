@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "super_architect:blank_monitor"
+    },
+    "c": {
+      "item": "super_architect:chip"
+    },
+    "g": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "cgc",
+    "gbg",
+    "cgc"
+  ],
+  "result": {
+    "count": 1,
+    "id": "super_architect:monitor"
+  }
+}

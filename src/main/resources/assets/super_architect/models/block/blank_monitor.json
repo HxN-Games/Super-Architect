@@ -2,8 +2,8 @@
     "format_version": "1.9.0",
 	"texture_size": [34, 18],
 	"textures": {
-		"0": "super_architect:block/monitor",
-		"particle": "super_architect:block/monitor"
+		"0": "super_architect:block/blank_monitor",
+		"particle": "super_architect:block/blank_monitor"
 	},
 	"elements": [
 		{

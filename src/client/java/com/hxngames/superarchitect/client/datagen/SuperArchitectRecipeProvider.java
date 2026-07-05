@@ -122,15 +122,16 @@ public class SuperArchitectRecipeProvider extends FabricRecipeProvider {
                 .save(exporter);
 
         // Disk 4k -> 8k
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_8k, 1)
-                .pattern("sms")
-                .pattern("mdm")
-                .pattern("sms")
-                .define('s', SuperArchitectItems.SILICON)
-                .define('m', Items.NETHERITE_INGOT)
-                .define('d', SuperArchitectItems.DISK_4k)
-                .unlockedBy(getHasName(SuperArchitectItems.DISK_4k), has(SuperArchitectItems.DISK_4k))
-                .save(exporter);
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(SuperArchitectItems.DISK_4k),
+                        Ingredient.of(Items.NETHERITE_INGOT),
+                        RecipeCategory.MISC,
+                        SuperArchitectItems.DISK_8k
+                )
+                .unlocks(getHasName(SuperArchitectItems.DISK_4k), has(SuperArchitectItems.DISK_4k))
+                .save(exporter, getConversionRecipeName(SuperArchitectItems.DISK_8k, SuperArchitectItems.DISK_4k) + "_smithing");
+
         // Base Disk 128
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SuperArchitectItems.DISK_128, 1)
                 .pattern("srs")

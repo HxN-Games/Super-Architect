@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "super_architect:disk_8192"
+        "recipe": "minecraft:disk_8192_from_disk_4096_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "super_architect:disk_8192"
+      "minecraft:disk_8192_from_disk_4096_smithing"
     ]
   }
 }

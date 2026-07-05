@@ -1,15 +1,16 @@
-// 1.21	2026-07-05T10:04:44.607475	Super Architect/Recipes
+// 1.21	2026-07-05T10:14:34.229657	Super Architect/Recipes
 ff7efbef23d82dce32c02b4848134c47bd151954 data/superarchitect/recipe/silicon_from_raw_silica_blasting.json
 ac88c5982cc1db7b9d65c95e60489426571ad364 data/superarchitect/advancement/recipes/misc/disk_rack.json
 73a4a651d015ec4fa5ed9f9307a68bbf6754f715 data/superarchitect/recipe/disk_2048.json
 e90bcba5eaee74432a04d1108490f3af88bd9694 data/superarchitect/recipe/disk_256.json
 4775e0a052beadc3d89c253e6e9cceab00bfea1b data/superarchitect/advancement/recipes/misc/silicon_from_raw_silica_blasting.json
+99a0a08fad080843c9ff866b6b7a1c3d764e864d data/superarchitect/advancement/recipes/misc/disk_8192_from_disk_4096_smithing.json
 f8e8718b1d68ae84ac8064c4a84b20174fde0f20 data/superarchitect/recipe/disk_rack.json
 7117e1ef598fbcfd0231c25f487aa2214e6ec9ba data/superarchitect/advancement/recipes/misc/disk_2048.json
 e40ad5e7ab35bc2f5f8de72617bb6653f6ee01b9 data/superarchitect/advancement/recipes/misc/raw_silica.json
-13da985530b166c74d8843531e636b8f64660d9c data/superarchitect/recipe/disk_8192.json
 fe13b0bd35c57718061a311b8442e6eef9a92460 data/superarchitect/recipe/disk_4096.json
 2b232b5b2316257104af8d60004c2dab595e3bd8 data/superarchitect/recipe/disk_128.json
+f8403609aaf9e6029010e6bfd5f910353faecff7 data/superarchitect/recipe/disk_8192_from_disk_4096_smithing.json
 62b7dc44af960e7f4a5f887f9e52b2d3cde38890 data/superarchitect/advancement/recipes/misc/disk_512.json
 6f08a13dc321d966e79c8d0060b841c1d6dc8c64 data/superarchitect/recipe/blank_monitor.json
 39d69681e40a85ef65194b504a00644a6e904a2b data/superarchitect/advancement/recipes/misc/disk_4096.json
@@ -26,4 +27,3 @@ f9efbf1d4a0383ff0855ee369b17b74b1441004f data/superarchitect/advancement/recipes
 7da2c6fe47824f5d248e2e78b6d9289b0bae26de data/superarchitect/advancement/recipes/misc/pipe.json
 938564a6c421e0f07a57f971baef196b9e0e54ac data/superarchitect/recipe/monitor.json
 3a8f5812f9fbbd5dd29570a66cb0e58fa6140a8f data/superarchitect/advancement/recipes/misc/chip.json
-c064a078fd1931c5e4c0e523704eef1322ebde7d data/superarchitect/advancement/recipes/misc/disk_8192.json
